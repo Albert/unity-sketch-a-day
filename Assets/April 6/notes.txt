@@ -1,0 +1,40 @@
+right:
+
+pointing in 1 of 5 directions,
+each of which has 1 of 3 rotations
+each of which has 1 of 3 elbow bends
+each of which has 1 of 8 wrist configurations
+
++ 0 0  (out to the side)
+  o f i
+    o - 3
+    f - 
+0 0 -  (back)
+  o f
+0 - 0  (down)
+  o f i
+0 0 +  (forward)
+    f i
+0 + 0  (up)
+    f i
+
+
+
+		outInDown  [0,2] = true;
+		upperPoint [1] = new Vector3 (0, 0, -1); // back
+		outInDown  [1,0] = true;
+		outInDown  [1,1] = true;
+		outInDown  [1,2] = false;
+		upperPoint [2] = new Vector3 (0, -1, 0); // down
+		outInDown  [2,0] = true;
+		outInDown  [2,1] = true;
+		outInDown  [2,2] = true;
+		upperPoint [3] = new Vector3 (0, 0, 1);  // forward
+		outInDown  [3,0] = false;
+		outInDown  [3,1] = true;
+		outInDown  [3,2] = true;
+		upperPoint [4] = new Vector3 (0, 1, 0);  // up
+		outInDown  [4,0] = false;
+		outInDown  [4,1] = true;
+		outInDown  [4,2] = true;
+
