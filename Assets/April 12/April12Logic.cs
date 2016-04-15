@@ -3,7 +3,7 @@ using System.Collections;
 
 public class April12Logic : MonoBehaviour {
 	public GameObject prefab;
-	public GameObject camera;
+	public GameObject myCamera;
 	private int numOfCubes = 10000;
 	private float cameraDepth = 150;
 	private Vector3 initialCameraSpot;
@@ -19,14 +19,14 @@ public class April12Logic : MonoBehaviour {
 			Vector3 startDistToCamera = planePosition - initialCameraSpot;
 			Vector3 endDistToCamera = startDistToCamera * Random.Range (0.7f, 2.0f);
 			Vector3 position = initialCameraSpot + endDistToCamera;
-			GameObject piece = Instantiate (prefab, position, Quaternion.identity) as GameObject;
+			Instantiate (prefab, position, Quaternion.identity);
 		}
 	}
 
 	void Update () {
 		Vector3 cameraPosition = Vector3.Slerp (Vector3.left, Vector3.back, Time.time / animationLength) * (-1 * cameraDepth);
-		camera.transform.position = cameraPosition;
-		camera.transform.LookAt (Vector3.zero);
+		myCamera.transform.position = cameraPosition;
+		myCamera.transform.LookAt (Vector3.zero);
 	}
 
 	int lossyDivide(int   num, int   den) { return Mathf.FloorToInt ((float) num / (float) den); }

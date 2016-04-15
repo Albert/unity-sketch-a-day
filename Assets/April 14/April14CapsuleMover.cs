@@ -2,13 +2,8 @@
 using System.Collections;
 
 public class April14CapsuleMover : MonoBehaviour {
-	private Rigidbody rbody;
-	private float speed = 10;
+	private float speed = 2;
 	public bool hasMoved;
-
-	void Start () {
-		rbody = GetComponent<Rigidbody> ();
-	}
 
 	void FixedUpdate () {
 		Vector3 originalPosition = transform.position;

@@ -15,7 +15,6 @@ public class April10Logic : MonoBehaviour {
 		lasers = new List<GameObject> ();
 		rbody = subject.GetComponent<Rigidbody> ();
 		for (int i = 0; i < numberOfLasers; i++) {
-			float percentageDone = (float)i / (float)numberOfLasers;
 			float x = Random.Range (-rangeOfPlacement, rangeOfPlacement);
 			float y = Random.Range (-rangeOfPlacement, rangeOfPlacement);
 			float z = Random.Range (-rangeOfPlacement, rangeOfPlacement);
